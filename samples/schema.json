@@ -1,0 +1,5 @@
+{
+    "name": "Sample",
+    "version": "1.0",
+    "attributes": ["firstName", "lastName"]
+}

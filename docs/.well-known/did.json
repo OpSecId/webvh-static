@@ -1,1 +1,23 @@
-
+{
+  "@context": [
+    "https://www.w3.org/ns/cid/v1"
+  ],
+  "id": "did:web:sample.identifier.me",
+  "authentication": [
+    "did:web:sample.identifier.me#key-01"
+  ],
+  "assertionmethod": [
+    "did:web:sample.identifier.me#key-01"
+  ],
+  "verificationMethod": [
+    {
+      "id": "did:web:sample.identifier.me#key-01",
+      "type": "Multikey",
+      "controller": "did:web:sample.identifier.me",
+      "publicKeyMultibase": "z6Mko8n5YZ5CzxEYXDN5GMMFeEJXQFtbSTtgGWp7EtrPieva"
+    }
+  ],
+  "alsoKnownAs": [
+    "did:webvh:Qmf3Z2wmAH4cCKmeZrwuXfZ5K1Adb1v5BH99Bq8caBSoa3:sample.identifier.me"
+  ]
+}
