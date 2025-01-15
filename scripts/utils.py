@@ -1,10 +1,14 @@
 import jcs
+import os
 from multiformats import multibase, multihash
 from aries_askar import Key, KeyAlg
 from aries_askar.bindings import LocalKeyHandle
 from hashlib import sha256
 from datetime import datetime, timezone
 
+DOMAIN = os.getenv("DOMAIN")
+DID_UPDATE_SEED = os.getenv("DID_UPDATE_SEED")
+DID_CONTROLLER_SEED = os.getenv("DID_CONTROLLER_SEED")
 
 def timestamp():
     return str(
@@ -60,7 +64,7 @@ def sign(document, key, verification_method=None):
 def create_resource(resource_id, content, metadata):
     return {
         "@context": [
-            "https://sample.identifier.me/attested-resource/v1",
+            f"https://{DOMAIN}/attested-resource/v1",
             "https://w3id.org/security/data-integrity/v2",
         ],
         "type": ["AttestedResource"],
