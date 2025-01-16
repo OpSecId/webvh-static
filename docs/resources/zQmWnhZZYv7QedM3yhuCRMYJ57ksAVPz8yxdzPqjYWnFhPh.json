@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://samples.identifier.me/attested-resource/v1",
+    "https://w3id.org/security/data-integrity/v2"
+  ],
+  "type": [
+    "AttestedResource"
+  ],
+  "id": "did:webvh:QmbR4dX7SoRRYDMfbkbnJNeExoaEE5hV3jA9wHubJFrCZc:samples.identifier.me/resources/zQmWnhZZYv7QedM3yhuCRMYJ57ksAVPz8yxdzPqjYWnFhPh.json",
+  "resourceContent": {
+    "issuerId": "did:webvh:QmbR4dX7SoRRYDMfbkbnJNeExoaEE5hV3jA9wHubJFrCZc:samples.identifier.me",
+    "revocDefType": "CL_ACCUM",
+    "tag": "Sample",
+    "credDefId": "did:webvh:QmbR4dX7SoRRYDMfbkbnJNeExoaEE5hV3jA9wHubJFrCZc:samples.identifier.me/resources/zQmSXaf5PAVDYRc4v41Yzy7uL5kwfBANbVtY1LjVPcysAoY.json",
+    "value": {
+      "maxCredNum": 10,
+      "publicKeys": {
+        "accumKey": {
+          "z": "1 0E706C828EE82BADC49AD483B667925919C9FD1A3A634D7AC7C942142F091BF6 1 18759E4C84054950D6DBB4FA79AFFEE31B242139332B509CE227A0FDCDDBCCB1 1 16E0ECF07E4587316EC6016901C17F872C259232D87DD445CFFD72B0A0415CBF 1 0B65AFC149DEDB279F2153980BC39AB0C480FF013D8F5634301B4DB489C8C59F 1 0688E2A44E0E5FE6CC6425A46A7D1A097A1D44DA8EDFEC98AF7B5EAB4817BBC1 1 01E1509B10C3A06DA91B1D29CC8F0D156706A49AF5DE08901CBE8801B76B9762 1 1900DFAA49FCF3EE65E1385B2828FBAAEAEEF5973C309694151415BA9C22E915 1 19D153B59282DC4C872AB11AE3C0458E6007EFEBEA8B4E06231DC870C00B84D8 1 06DB160AEA775733D265D98497A534850B1E8517BF4DAF46DC73A67526340090 1 07F7309CA17ABEFDFBAB416B02E99BD174D889D5E89CBAF4845A83A14510851B 1 12B144CA2B6345C8311A800E5E2F99399893EDD7559BCB40ABF860476B9EBC72 1 10CF25EC4721C311B2A43E3F1F436067AF92F7BB04F1BA532B754C66D69841B7"
+        }
+      },
+      "tailsHash": "HHfuFDRAPT5RWqB1sjr3hod6aMBh5ree6p3vD2gjXqPq",
+      "tailsLocation": "/tmp/HHfuFDRAPT5RWqB1sjr3hod6aMBh5ree6p3vD2gjXqPq"
+    }
+  },
+  "resourceMetadata": {
+    "resourceId": "zQmWnhZZYv7QedM3yhuCRMYJ57ksAVPz8yxdzPqjYWnFhPh",
+    "resourceType": "AnonCredsRevRegDef"
+  },
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-jcs-2022",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:webvh:QmbR4dX7SoRRYDMfbkbnJNeExoaEE5hV3jA9wHubJFrCZc:samples.identifier.me#key-01",
+    "proofValue": "zsKtcosdVs1c3HfeXVcGgnXssuaJRtrLfATq6UV1qcrLaLuxgHNsWctxbkRMKRHDUcVQVHCp9nADmT5C6WQCJNex"
+  }
+}
