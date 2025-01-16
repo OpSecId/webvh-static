@@ -2,22 +2,22 @@
   "@context": [
     "https://www.w3.org/ns/cid/v1"
   ],
-  "id": "did:web:sample.identifier.me",
+  "id": "did:web:None",
   "authentication": [
-    "did:web:sample.identifier.me#key-01"
+    "did:web:None#key-01"
   ],
   "assertionmethod": [
-    "did:web:sample.identifier.me#key-01"
+    "did:web:None#key-01"
   ],
   "verificationMethod": [
     {
-      "id": "did:web:sample.identifier.me#key-01",
+      "id": "did:web:None#key-01",
       "type": "Multikey",
-      "controller": "did:web:sample.identifier.me",
+      "controller": "did:web:None",
       "publicKeyMultibase": "z6Mko8n5YZ5CzxEYXDN5GMMFeEJXQFtbSTtgGWp7EtrPieva"
     }
   ],
   "alsoKnownAs": [
-    "did:webvh:Qmf3Z2wmAH4cCKmeZrwuXfZ5K1Adb1v5BH99Bq8caBSoa3:sample.identifier.me"
+    "did:webvh:QmRoNbbtK2JdVbqpJKvwT2SHTCs1YFVmB76Q7BpV62ncg8:None"
   ]
 }

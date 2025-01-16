@@ -1,6 +1,7 @@
 import json
 import os
 from utils import (
+    DOMAIN,
     sign,
     timestamp,
     generate_hash,
@@ -11,24 +12,25 @@ from utils import (
 update_key = key_from_seed(os.getenv("DID_UPDATE_SEED"))
 controller_key = key_from_seed(os.getenv("DID_CONTROLLER_SEED"))
 
+placeholder = r'{SCID}'
 pre_log_entry = {
-    "versionId": r"{SCID}",
+    "versionId": placeholder,
     "versionTime": timestamp(),
     "parameters": {
         "method": "did:webvh:0.5",
-        "scid": r"{SCID}",
+        "scid": placeholder,
         "updateKeys": [encode_public_key(update_key)],
     },
     "state": {
         "@context": ["https://www.w3.org/ns/cid/v1"],
-        "id": r"did:webvh:{SCID}:sample.identifier.me",
-        "authentication": [r"did:webvh:{SCID}:sample.identifier.me#key-01"],
-        "assertionmethod": [r"did:webvh:{SCID}:sample.identifier.me#key-01"],
+        "id": f"did:webvh:{placeholder}:{DOMAIN}",
+        "authentication": [f"did:webvh:{placeholder}:{DOMAIN}#key-01"],
+        "assertionmethod": [f"did:webvh:{placeholder}:{DOMAIN}#key-01"],
         "verificationMethod": [
             {
-                "id": r"did:webvh:{SCID}:sample.identifier.me#key-01",
+                "id": f"did:webvh:{placeholder}:{DOMAIN}#key-01",
                 "type": "Multikey",
-                "controller": r"did:webvh:{SCID}:sample.identifier.me",
+                "controller": f"did:webvh:{placeholder}:{DOMAIN}",
                 "publicKeyMultibase": encode_public_key(controller_key),
             }
         ],
