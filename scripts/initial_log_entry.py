@@ -7,7 +7,6 @@ from utils import (
     sign,
     timestamp,
     generate_hash,
-    key_from_seed,
     encode_public_key,
 )
 
