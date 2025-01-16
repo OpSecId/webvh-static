@@ -5,20 +5,23 @@ from aries_askar import Key, KeyAlg
 from aries_askar.bindings import LocalKeyHandle
 from hashlib import sha256
 from datetime import datetime, timezone
+from dotenv import load_dotenv
 
+load_dotenv()
 DOMAIN = os.getenv("DOMAIN")
 DID_UPDATE_SEED = os.getenv("DID_UPDATE_SEED")
 DID_CONTROLLER_SEED = os.getenv("DID_CONTROLLER_SEED")
+
+def key_from_seed(seed):
+    return Key(LocalKeyHandle()).from_seed(KeyAlg.ED25519, seed)
+
+update_key = key_from_seed(DID_UPDATE_SEED)
+controller_key = key_from_seed(DID_CONTROLLER_SEED)
 
 def timestamp():
     return str(
         datetime.now(timezone.utc).isoformat("T", "seconds").replace("+00:00", "Z")
     )
-
-
-def key_from_seed(seed):
-    return Key(LocalKeyHandle()).from_seed(KeyAlg.ED25519, seed)
-
 
 def encode_public_key(key, prefix="ed01"):
     return multibase.encode(

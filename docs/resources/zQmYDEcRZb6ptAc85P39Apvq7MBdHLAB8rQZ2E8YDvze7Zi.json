@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://samples.identifier.me/attested-resource/v1",
+    "https://w3id.org/security/data-integrity/v2"
+  ],
+  "type": [
+    "AttestedResource"
+  ],
+  "id": "did:webvh:QmRi11FVbNvB9PGC8afnD44qre8x5Z1JKTpaycrimYrstv:samples.identifier.me/resources/zQmYDEcRZb6ptAc85P39Apvq7MBdHLAB8rQZ2E8YDvze7Zi.json",
+  "resourceContent": {
+    "name": "Sample",
+    "version": "1.0",
+    "attrNames": [
+      "firstName",
+      "lastName"
+    ],
+    "issuerId": "did:webvh:QmRi11FVbNvB9PGC8afnD44qre8x5Z1JKTpaycrimYrstv:samples.identifier.me"
+  },
+  "resourceMetadata": {
+    "resourceId": "zQmYDEcRZb6ptAc85P39Apvq7MBdHLAB8rQZ2E8YDvze7Zi",
+    "resourceType": "AnonCredsSchema"
+  },
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-jcs-2022",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:webvh:QmRi11FVbNvB9PGC8afnD44qre8x5Z1JKTpaycrimYrstv:samples.identifier.me#key-01",
+    "proofValue": "z42P5TYetMWdwrhpheoeMJWkXrGbZvXdEXa8CVKw3oFyXBWyqkych69sNLbNxPH1XnTjCYPh9yFgJ8XdCQKSqihG1"
+  }
+}

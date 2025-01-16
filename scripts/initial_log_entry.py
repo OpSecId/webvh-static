@@ -2,15 +2,14 @@ import json
 import os
 from utils import (
     DOMAIN,
+    update_key,
+    controller_key,
     sign,
     timestamp,
     generate_hash,
     key_from_seed,
     encode_public_key,
 )
-
-update_key = key_from_seed(os.getenv("DID_UPDATE_SEED"))
-controller_key = key_from_seed(os.getenv("DID_CONTROLLER_SEED"))
 
 placeholder = r'{SCID}'
 pre_log_entry = {
